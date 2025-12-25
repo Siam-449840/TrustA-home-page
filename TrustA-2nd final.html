@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustA | Bangladesh's Most Trusted Digital Marketplace</title>
+    <meta name="description" content="Secure transactions, verified identities, and guaranteed delivery with TrustA's innovative TrustCode system">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Colors - Trust and Professionalism */
+            --trust-blue: #1e3a8a;
+            --trust-light-blue: #3b82f6;
+            --trust-deep-blue: #1e40af;
+            --trust-pale-blue: #dbeafe;
+            
+            /* Supporting Colors */
+            --success-green: #10b981;
+            --warning-amber: #f59e0b;
+            --danger-red: #ef4444;
+            --info-cyan: #06b6d4;
+            
+            /* Bangladeshi Accents */
+            --bengali-green: #006a4e;
+            --bengali-red: #c41e3a;
+            --bengali-gold: #d4af37;
+            
+            /* Neutrals */
+            --neutral-50: #f9fafb;
+            --neutral-100: #f3f4f6;
+            --neutral-200: #e5e7eb;
+            --neutral-300: #d1d5db;
+            --neutral-400: #9ca3af;
+            --neutral-500: #6b7280;
+            --neutral-600: #4b5563;
+            --neutral-700: #374151;
+            --neutral-800: #1f2937;
+            --neutral-900: #111827;
+            
+            /* Dark Mode Colors */
+            --dark-bg: #1a202c;
+            --dark-text: #e2e8f0;
+            --dark-text-deep: #69727d;
+            --dark-card: #2d3748;
+            
+            /* Gradients */
+            --hero-gradient: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            --trustcode-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            --feature-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Transitions */
+            --transition: all 0.3s ease;
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space: 1rem;
+            --space-md: 1.25rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 2.5rem;
+            --space-3xl: 3rem;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .feature-card,
+        body.dark-mode .product-card,
+        body.dark-mode .testimonial-card,
+        body.dark-mode .step-content,
+        body.dark-mode .security-item,
+        body.dark-mode .trustcode-card,
+        body.dark-mode .stats-section,
+        body.dark-mode .faq-item,
+        body.dark-mode .filter-btn {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .hero,
+        body.dark-mode .cta {
+            background: linear-gradient(135deg, #0c1e3d 0%, #0f2442 100%);
+        }
+        
+        body.dark-mode header,
+        body.dark-mode .stats-section,
+        body.dark-mode .process {
+            background-color: #1a202c;
+        }
+        
+        body.dark-mode .features,
+        body.dark-mode .feed,
+        body.dark-mode .testimonials,
+        body.dark-mode .faq {
+            background-color: #252b3b;
+        }
+        
+        body.dark-mode footer {
+            background-color: #0c1e3d;
+        }
+        
+        body.dark-mode .section-title,
+        body.dark-mode .feature-content h3,
+        body.dark-mode .product-title,
+        body.dark-mode .testimonial-info h4,
+        body.dark-mode h1, 
+        body.dark-mode h2, 
+        body.dark-mode h3, 
+        body.dark-mode h4,
+        body.dark-mode .stats-number,
+        body.dark-mode .numeric-code,
+        body.dark-mode .product-price {
+            color: #63b3ed;
+        }
+        
+        body.dark-mode p,
+        body.dark-mode .stats-label,
+        body.dark-mode .feature-content p,
+        body.dark-mode .product-description,
+        body.dark-mode .testimonial-content,
+        body.dark-mode .step-content p {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .logo,
+        body.dark-mode nav a,
+        body.dark-mode .btn-outline {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .btn-outline {
+            border-color: var(--dark-text);
+        }
+        
+        body.dark-mode .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .filter-btn {
+            border-color: var(--dark-card);
+        }
+        
+        body.dark-mode .filter-btn.active,
+        body.dark-mode .filter-btn:hover {
+            background: var(--trust-light-blue);
+            border-color: var(--trust-light-blue);
+        }
+
+        /* Skip to content link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--neutral-50);
+            color: var(--neutral-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        p {
+            margin-bottom: var(--space);
+        }
+        
+        a {
+            color: var(--trust-light-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--trust-blue);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            transform: translateX(0);
+        }
+        
+        .btn-primary {
+            background: var(--trust-light-blue);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary:hover {
+            background: var(--trust-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--trust-light-blue);
+            color: var(--trust-light-blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--trust-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4); 
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--trust-blue);
+            border: 1px solid var(--trust-light-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--trust-light-blue);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--success-green);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #059669;
+        }
+        
+        .btn-lg {
+            padding: 1.1rem 2.2rem;
+            font-size: 1.1rem;
+            border-radius: var(--radius-lg);
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        body.dark-mode header {
+            background: rgba(26, 32, 44, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.6);
+    
+    /* CRITICAL CHANGES HERE: */
+    overflow: hidden;  /* Cuts off the parts we zoom out */
+    padding: 0;        /* Removed padding (was 3px) so image fills the box */
+}
+
+        .logo-img {
+    width: 100%;
+    height: 100%;
+    /* changed to cover so it fills the square completely */
+    object-fit: cover; 
+    display: block;
+    
+    /* CRITICAL CHANGE HERE: */
+    /* 1.2 = 20% zoom. You might need 1.3 or 1.4 to fully hide the beige box */
+    transform: scale(1.25); 
+}
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--space-xl);
+        }
+        
+        nav a {
+            color: var(--neutral-800);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: var(--trust-blue);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--trust-light-blue);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+        
+        .user-actions {
+            display: flex;
+            gap: var(--space);
+            align-items: center;
+        }
+        
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            background: transparent;
+            border: none;
+            color: var(--trust-blue);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        body.dark-mode .dark-mode-toggle {
+            color: var(--dark-text);
+        }
+        
+        .dark-mode-toggle:hover {
+            background: var(--trust-pale-blue);
+        }
+        
+        body.dark-mode .dark-mode-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--trust-blue);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        body.dark-mode .mobile-menu-toggle {
+            color: var(--dark-text);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--hero-gradient);
+            color: white;
+            padding: 6rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1556741533-974f8e62a92d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            margin-bottom: var(--space-lg);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            max-width: 700px;
+            margin: 0 auto var(--space-2xl);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: var(--space);
+            margin-top: var(--space-2xl);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: var(--space-2xl) 0;
+            position: relative;
+            z-index: 10;
+            margin-top: -4rem;
+            box-shadow: var(--shadow-xl);
+            border-radius: var(--radius-xl);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: var(--space-xl) 0;
+        }
+        
+        .stats-item {
+            text-align: center;
+            padding: var(--space);
+            min-width: 200px;
+        }
+        
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--trust-blue);
+            margin-bottom: var(--space-xs);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .stats-number::after {
+            position: absolute;
+            top: 0;
+            right: -20px;
+            font-size: 1.5rem;
+            color: var(--success-green);
+        }
+        
+        .stats-label {
+            font-size: 1.1rem;
+            color: var(--neutral-600);
+            font-weight: 500;
+        }
+        
+        body.dark-mode .stats-label {
+            color: var(--dark-text);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: var(--space-3xl) 0;
+            background: var(--neutral-100);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-2xl);
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            color: var(--trust-blue);
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+            animation: fadeIn 1s ease;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--trust-light-blue);
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.4rem;
+            color: var(--neutral-600);
+            opacity: 0.8;
+            font-weight: 400;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+        
+        body.dark-mode .section-subtitle {
+            color: var(--dark-text);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            animation: fadeInUp 0.8s ease both;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            background: var(--feature-gradient);
+            color: white;
+            font-size: 2.5rem;
+            padding: var(--space-xl) var(--space);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+        
+        .feature-card:hover .feature-icon::before {
+            top: -100%;
+            left: -100%;
+        }
+        
+        .feature-content {
+            padding: var(--space-xl);
+            flex-grow: 1;
+        }
+        
+        .feature-content h3 {
+            color: var(--trust-blue);
+            margin-bottom: var(--space);
+            font-size: 1.4rem;
+        }
+        
+        .feature-content p {
+            color: var(--neutral-600);
+            margin-bottom: var(--space);
+        }
+        
+        body.dark-mode .feature-content p {
+            color: var(--dark-text);
+        }
+        
+        .feature-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .feature-list li {
+            margin-bottom: var(--space-sm);
+            position: relative;
+            padding-left: var(--space-lg);
+            color: var(--neutral-700);
+        }
+        
+        body.dark-mode .feature-list li {
+            color: var(--dark-text);
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            color: var(--success-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* TrustCode Section */
+        .trustcode {
+            padding: var(--space-3xl) 0;
+            background: linear-gradient(to bottom, var(--neutral-50), white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trustcode-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3xl);
+        }
+        
+        .trustcode-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            perspective: 1000px;
+        }
+        
+        .trustcode-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            padding: var(--space-2xl);
+            width: 340px;
+            text-align: center;
+            border: 4px solid var(--trust-light-blue);
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(-5deg);
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .trustcode-card:hover {
+            transform: rotateY(5deg);
+        }
+        
+        .trustcode-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px dashed var(--trust-light-blue);
+            border-radius: 28px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        
+        .trustcode-card h3 {
+            color: var(--trust-blue);
+            margin-bottom: var(--space-lg);
+            font-size: 1.8rem;
+        }
+        
+        .qrcode {
+            background: var(--neutral-100);
+            width: 200px;
+            height: 200px;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            font-size: 5rem;
+            color: var(--trust-blue);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--neutral-200);
+        }
+        
+        .qrcode::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%);
+            animation: shine 2s infinite;
+        }
+        
+        .numeric-code {
+            background: var(--neutral-100);
+            padding: var(--space) var(--space-lg);
+            border-radius: var(--radius);
+            font-family: 'Courier New', monospace;
+            font-size: 1.3rem;
+            letter-spacing: 3px;
+            margin-bottom: var(--space-lg);
+            color: var(--trust-blue);
+            font-weight: bold;
+            position: relative;
+            border: 1px solid var(--neutral-200);
+        }
+        
+        .numeric-code::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--trust-blue);
+            animation: expandWidth 3s infinite;
+        }
+        
+        .trustcode-info {
+            flex: 1;
+        }
+        
+        .security-levels {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space);
+            margin-top: var(--space-xl);
+        }
+        
+        .security-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space);
+            background: white;
+            padding: var(--space);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            animation: fadeInUp 0.5s ease both;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        
+        .security-item:nth-child(1) { animation-delay: 0.1s; }
+        .security-item:nth-child(2) { animation-delay: 0.2s; }
+        .security-item:nth-child(3) { animation-delay: 0.3s; }
+        .security-item:nth-child(4) { animation-delay: 0.4s; }
+        .security-item:nth-child(5) { animation-delay: 0.5s; }
+        .security-item:nth-child(6) { animation-delay: 0.6s; }
+        
+        .security-item:hover {
+            background: var(--trust-pale-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .security-item i {
+            background: var(--trust-light-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: var(--space-3xl) 0;
+            background: white;
+            position: relative;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 40px;
+            width: 5px;
+            background: var(--trust-light-blue);
+            z-index: 0;
+            border-radius: 3px;
+        }
+        
+        .step {
+            display: flex;
+            gap: var(--space-xl);
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease both;
+        }
+        
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+        .step:nth-child(5) { animation-delay: 0.5s; }
+        
+        .step-number {
+            background: var(--trust-light-blue);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        .step-content {
+            background: var(--neutral-50);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            flex: 1;
+            position: relative;
+            border: 1px solid var(--neutral-200);
+        }
+        
+        .step-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            transition: width 1s ease;
+        }
+        
+        .step-content:hover::before {
+            width: 100%;
+        }
+        
+        .step-content h3 {
+            color: var(--trust-blue);
+            margin-bottom: var(--space);
+            font-size: 1.3rem;
+        }
+        
+        .step-content p {
+            color: var(--neutral-600);
+        }
+        
+        body.dark-mode .step-content p {
+            color: var(--dark-text);
+        }
+        
+        /* TrustA Feed Section */
+        .feed {
+            padding: var(--space-3xl) 0;
+            background: linear-gradient(to bottom, white, var(--neutral-50));
+            position: relative;
+        }
+        
+        .feed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+            gap: var(--space);
+        }
+        
+        .feed-filters {
+            display: flex;
+            gap: var(--space);
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: white;
+            border: 1px solid var(--neutral-200);
+            padding: var(--space-xs) var(--space);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--trust-light-blue);
+            color: white;
+            border-color: var(--trust-light-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            animation: fadeInUp 0.8s ease both;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.4s; }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .product-image {
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4.5rem;
+            color: var(--neutral-300);
+            position: relative;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: var(--space);
+            right: var(--space);
+            background: var(--success-green);
+            color: white;
+            padding: var(--space-xs) var(--space);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .product-info {
+            padding: var(--space-xl);
+            flex-grow: 1;
+        }
+        
+        .product-title {
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--trust-blue);
+            font-size: 1.4rem;
+        }
+        
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--trust-blue);
+            margin-bottom: var(--space);
+        }
+        
+        .product-description {
+            color: var(--neutral-600);
+            font-size: 1rem;
+            margin-bottom: var(--space);
+            line-height: 1.4;
+        }
+        
+        body.dark-mode .product-description {
+            color: var(--dark-text);
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .product-rating {
+            color: var(--warning-amber);
+            font-size: 1.1rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: var(--space-xs);
+        }
+        
+        .product-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--neutral-100);
+            color: var(--neutral-800);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .product-btn:hover {
+            background: var(--neutral-200);
+            transform: scale(1.1);
+        }
+        
+        .product-btn.primary {
+            background: var(--trust-light-blue);
+            color: white;
+        }
+        
+        .product-btn.primary:hover {
+            background: var(--trust-deep-blue);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: var(--space-3xl) 0;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: var(--space);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: var(--neutral-50);
+            border: none;
+            padding: var(--space-lg);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--trust-blue);
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .faq-question::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: var(--space-lg);
+            top: 50%;
+            transform: translateY(-50%);
+            transition: var(--transition);
+        }
+        
+        .faq-question.active {
+            background: var(--trust-pale-blue);
+        }
+        
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer p {
+            padding: var(--space) var(--space-lg);
+            color: var(--neutral-600);
+        }
+        
+        body.dark-mode .faq-answer p {
+            color: var(--dark-text);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--space-3xl) 0;
+            background: var(--neutral-100);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow);
+            position: relative;
+            animation: fadeInUp 0.8s ease both;
+        }
+        
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        
+        .testimonial-card::before {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--trust-pale-blue);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            margin-bottom: var(--space);
+            color: var(--neutral-600);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        body.dark-mode .testimonial-content {
+            color: var(--dark-text);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space);
+        }
+        
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--neutral-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--trust-blue);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .testimonial-info h4 {
+            margin-bottom: var(--space-xs);
+            color: var(--trust-blue);
+            font-size: 1.4rem;
+        }
+        
+        .testimonial-info p {
+            margin: 0;
+            color: var(--neutral-500);
+            font-size: 1rem;
+        }
+        
+        body.dark-mode .testimonial-info p {
+            color: var(--dark-text);
+        }
+        
+        .testimonial-rating {
+            color: var(--warning-amber);
+            margin-left: auto;
+            margin-bottom: var(--space);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--trust-deep-blue) 100%);
+            color: white;
+            padding: var(--space-3xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space);
+            animation: fadeIn 1s ease;
+        }
+        
+        .cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto var(--space-2xl);
+            animation: fadeIn 1s ease 0.2s both;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space);
+            margin-top: var(--space-2xl);
+            animation: fadeIn 1s ease 0.4s both;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--trust-blue);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+            filter: blur(1px);
+            z-index: 1;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-col h3 {
+            margin-bottom: var(--space);
+            position: relative;
+            padding-bottom: var(--space);
+            font-size: 1.3rem;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--trust-light-blue);
+            border-radius: var(--radius-sm);
+        }
+        
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col li {
+            margin-bottom: var(--space);
+        }
+        
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .footer-col a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space);
+            margin-top: var(--space);
+        }
+        
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--trust-light-blue);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotateY(-5deg);
+            }
+            50% {
+                transform: translateY(-10px) rotateY(5deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+        
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+        
+        @keyframes expandWidth {
+            0% {
+                width: 0;
+                left: 0;
+            }
+            50% {
+                width: 100%;
+                left: 0;
+            }
+            100% {
+                width: 0;
+                left: 100%;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 var(--space);
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .trustcode-container {
+                flex-direction: column;
+                gap: var(--space-xl);
+            }
+            
+            .security-levels {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .user-actions {
+                width: auto;
+                justify-content: flex-end;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: var(--space);
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                align-self: flex-start;
+                margin-bottom: var(--space);
+            }
+            
+            .process-steps::before {
+                left: 20px;
+            }
+            
+            .feed-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .feed-filters {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: var(--space);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .features-grid,
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .security-levels {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .feed-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="ChatGPT Image Dec 25, 2025, 11_56_15 PM.png" alt="TrustA Logo" class="logo-img">
+                </div>
+                <span>TrustA</span>
+            </a>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#trustcode">TrustCode</a></li>
+                    <li><a href="#process">How It Works</a></li>
+                    <li><a href="#feed">Marketplace</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-actions">
+                <button class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <button class="btn btn-outline">
+                    <i class="fas fa-sign-in-alt"></i> Log In
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Bangladesh's Most Trusted Digital Marketplace.</h1>
+            <p>Secure transactions, verified identities, and guaranteed delivery with TrustA's innovative TrustCode system</p>
+            
+            <div class="hero-btns">
+                <button class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-cart"></i> Start Shopping
+                </button>
+                <button class="btn btn-outline btn-lg">
+                    <i class="fas fa-store"></i> Start Selling
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <div class="stats-item">
+                <div class="stats-number">150K+</div>
+                <div class="stats-label">Verified Users</div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-number">12K+</div>
+                <div class="stats-label">Verified Sellers</div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-number">25K+</div>
+                <div class="stats-label">Products Listed</div>
+            </div>
+            <div class="stats-item">
+                <div class="stats-number">98.6%</div>
+                <div class="stats-label">Successful Transactions</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Trust-Building Features</h2>
+                <p class="section-subtitle">TrustA is built on a foundation of security, transparency, and user protection at every step of the transaction process.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1: Registration & Verification -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Registration & Verification</h3>
+                        <p>Multi-layer identity verification to prevent fraud and build trust in our community.</p>
+                        <ul class="feature-list">
+                            <li>National ID (NID) verification</li>
+                            <li>Mobile OTP authentication</li>
+                            <li>Facial recognition technology</li>
+                            <li>Secure login PIN system</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Feature 2: Escrow Payment -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Escrow Payment Protection</h3>
+                        <p>Funds held securely until delivery confirmation, ensuring neither party is at risk.</p>
+                        <ul class="feature-list">
+                            <li>Secure TrustA Escrow account</li>
+                            <li>Payment release only after verification</li>
+                            <li>GPS location verification</li>
+                            <li>Zero hidden charges policy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Feature 3: TrustCode System -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>TrustCode Verification</h3>
+                        <p>Dual-layer offline payment verification system that prevents fraud and ensures delivery.</p>
+                        <ul class="feature-list">
+                            <li>QR + Numeric code security</li>
+                            <li>Military-grade AES-256 encryption</li>
+                            <li>Geolocation fencing</li>
+                            <li>30-minute time limitation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Feature 4: Secure Delivery -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Secure Delivery Process</h3>
+                        <p>End-to-end package security with real-time tracking and verification.</p>
+                        <ul class="feature-list">
+                            <li>Real-time GPS tracking</li>
+                            <li>Professional tamper-proof packaging</li>
+                            <li>In-app communication only</li>
+                            <li>Two-step TrustCode verification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TrustCode Section -->
+    <section class="trustcode" id="trustcode">
+        <div class="container trustcode-container">
+            <div class="trustcode-visual">
+                <div class="trustcode-card">
+                    <h3>TrustCode Verification</h3>
+                    <div class="qrcode">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="numeric-code" id="numeric-code">7A9B4C2D</div>
+                    <p>Scan to verify product delivery</p>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem;">
+                        <i class="fas fa-check-circle"></i> Verify Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="trustcode-info">
+                <h2 class="section-title">TrustCode Security System</h2>
+                <p>TrustCode is a revolutionary two-tier offline payment verification system that uses both a numeric code and QR code. It ensures that products are delivered to the right person and payments are released securely, creating a fraud-resistant ecosystem.</p>
+                
+                <div class="security-levels">
+                    <div class="security-item">
+                        <i class="fas fa-user-lock"></i>
+                        <div>Login-bound Verification</div>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-key"></i>
+                        <div>AES-256 Encryption</div>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-clock"></i>
+                        <div>30-min Time Limitation</div>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Geolocation Fencing</div>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-robot"></i>
+                        <div>AI Fraud Detection</div>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-wifi-slash"></i>
+                        <div>Offline Verification</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Secure Delivery Process</h2>
+                <p class="section-subtitle">Our step-by-step process ensures secure, transparent, and reliable transactions for both buyers and sellers.</p>
+            </div>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Order Confirmation</h3>
+                        <p>Buyer places order with payment to TrustA Escrow account. A unique TrustCode is generated and bound to the buyer's account for secure verification.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Professional Packaging</h3>
+                        <p>Product is professionally packaged with dual TrustCode labels (external QR code + internal numeric code) to prevent tampering and ensure authenticity.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Real-time Tracking</h3>
+                        <p>Buyer tracks delivery in real-time through the TrustA app. Delivery personnel can only contact buyers through the secure in-app system.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Product Verification</h3>
+                        <p>Buyer inspects product upon delivery, checking for damage, authenticity, and the internal TrustCode sticker to ensure the product hasn't been tampered with.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>TrustCode Verification</h3>
+                        <p>Buyer scans the QR code to confirm delivery. Funds are automatically released to the seller and delivery personnel, completing the secure transaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TrustA Feed Section -->
+    <section class="feed" id="feed">
+        <div class="container">
+            <div class="feed-header">
+                <h2 class="section-title">TrustA Feed</h2>
+                <div class="feed-filters">
+                    <div class="filter-btn active">All</div>
+                    <div class="filter-btn">B2B</div>
+                    <div class="filter-btn">B2C</div>
+                    <div class="filter-btn">Trending</div>
+                    <div class="filter-btn">Local</div>
+                </div>
+            </div>
+            
+            <div class="feed-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #f0f7ff;">
+                        <div class="product-badge">Trusted Seller</div>
+                        <i class="fas fa-mobile-alt" style="color: #3b82f6;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smartphone X Pro</h3>
+                        <div class="product-price">৳ 25,999</div>
+                        <p class="product-description">Latest smartphone with AI camera and 128GB storage</p>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(42)</span>
+                            </div>
+                            <div class="product-actions">
+                                <div class="product-btn">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="product-btn primary">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #f0fdf4;">
+                        <div class="product-badge">Premium</div>
+                        <i class="fas fa-tshirt" style="color: #10b981;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Cotton Shirts</h3>
+                        <div class="product-price">৳ 1,299</div>
+                        <p class="product-description">Pack of 3 formal shirts with wrinkle-free fabric</p>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(28)</span>
+                            </div>
+                            <div class="product-actions">
+                                <div class="product-btn">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="product-btn primary">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #fffbeb;">
+                        <div class="product-badge">Bestseller</div>
+                        <i class="fas fa-book" style="color: #f59e0b;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Business Strategy Books</h3>
+                        <div class="product-price">৳ 2,450</div>
+                        <p class="product-description">Set of 5 best-selling business strategy books</p>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(56)</span>
+                            </div>
+                            <div class="product-actions">
+                                <div class="product-btn">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="product-btn primary">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-color: #fef2f2;">
+                        <div class="product-badge">Verified</div>
+                        <i class="fas fa-blender" style="color: #ef4444;"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smart Kitchen Blender</h3>
+                        <div class="product-price">৳ 4,799</div>
+                        <p class="product-description">1500W professional blender with 8 preset programs</p>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>(19)</span>
+                            </div>
+                            <div class="product-actions">
+                                <div class="product-btn">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                                <div class="product-btn primary">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about TrustA</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">How does the TrustCode system work?</button>
+                    <div class="faq-answer">
+                        <p>TrustCode is a revolutionary two-tier offline payment verification system that uses both a numeric code and QR code. When a buyer places an order, a unique TrustCode is generated and bound to their account. This code is used to verify that the product is delivered to the right person before payment is released to the seller.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Is my payment secure with TrustA?</button>
+                    <div class="faq-answer">
+                        <p>Yes, all payments are held in our secure escrow account until the buyer confirms receipt and satisfaction with the product. We use military-grade AES-256 encryption to protect all transactions and personal information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">How do I become a verified seller?</button>
+                    <div class="faq-answer">
+                        <p>To become a verified seller, you need to complete our multi-layer verification process, which includes National ID (NID) verification, mobile OTP authentication, and business registration verification. This process helps build trust with buyers and ensures a secure marketplace.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">What happens if I receive a damaged product?</button>
+                    <div class="faq-answer">
+                        <p>If you receive a damaged product, you can initiate a dispute through our platform. Our support team will investigate the issue, and if the claim is valid, your payment will be refunded in full. We also offer buyer protection insurance for additional peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-subtitle">Hear from our community of buyers and sellers who have experienced the TrustA difference.</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "TrustA has completely transformed my online business. The escrow payment system gives me confidence that I'll receive payment, and buyers feel secure knowing they can verify products before payment is released."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h4>Ahmed Khan</h4>
+                            <p>Seller since 2023</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As a frequent online shopper, TrustA has given me peace of mind. The TrustCode system ensures I get exactly what I ordered, and the verification process prevents any fraud. I've never felt safer shopping online."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Rahman</h4>
+                            <p>Buyer since 2022</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "As a delivery partner, TrustA's system protects me too. I get paid immediately after verification, and the in-app communication keeps everything professional."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Delivery Partner</p>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Ready to Experience Secure E-commerce?</h2>
+            <p>Join thousands of satisfied users in Bangladesh's most trusted digital marketplace</p>
+            
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-lg">
+                    <i class="fas fa-shopping-cart"></i> Start Shopping
+                </button>
+                <button class="btn btn-outline btn-lg">
+                    <i class="fas fa-store"></i> Start Selling
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TrustA</h3>
+                    <p>Bangladesh's most trusted digital marketplace with secure escrow payments and verified transactions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Buyers</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> How to Buy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Payment Methods</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Buyer Protection</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Sellers</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> How to Sell</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Seller Fees</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping Guidelines</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Seller Protection</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Seller Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Gulshan-1, Dhaka, Bangladesh</a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i> +880 1711-123456</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> support@trusta.com</a></li>
+                        <li><a href="#"><i class="fas fa-headset"></i> 24/7 Customer Support</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Security Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 TrustA Ltd. All rights reserved. | Secure Digital Marketplace for Bangladesh</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">ISO 27001 Certified | PCI DSS Compliant | GDPR Compliant</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const icon = darkModeToggle.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+            
+            // FAQ accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const isActive = question.classList.contains('active');
+                    
+                    // Close all FAQs
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.maxHeight = '0';
+                    });
+                    
+                    // Open clicked FAQ if it wasn't active
+                    if (!isActive) {
+                        question.classList.add('active');
+                        const answer = question.nextElementSibling;
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+            
+            // TrustCode animation
+            const trustCodeCard = document.querySelector('.trustcode-card');
+            setInterval(() => {
+                trustCodeCard.style.transform = 'rotateY(-5deg) translateY(0)';
+                setTimeout(() => {
+                    trustCodeCard.style.transform = 'rotateY(5deg) translateY(-10px)';
+                }, 1500);
+            }, 3000);
+            
+            // Simulate TrustCode change
+            const numericCode = document.getElementById('numeric-code');
+            setInterval(() => {
+                const newCode = generateTrustCode();
+                numericCode.textContent = newCode;
+                numericCode.style.animation = 'none';
+                setTimeout(() => {
+                    numericCode.style.animation = 'fadeIn 0.5s';
+                }, 10);
+            }, 10000);
+            
+            function generateTrustCode() {
+                const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+                let code = '';
+                for (let i = 0; i < 8; i++) {
+                    code += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return code;
+            }
+            
+            // Filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
+                    header.style.padding = '0.8rem 0';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                    header.style.padding = '1.2rem 0';
+                }
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
